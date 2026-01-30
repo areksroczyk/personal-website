@@ -37,7 +37,7 @@ export default function Home() {
 								>
 									jakaszkola.pl
 								</a> */}
-								Chilling out
+								In Product Builder mode
 							</div>
 						</div>
 
@@ -50,14 +50,14 @@ export default function Home() {
 							/>
 
 							<figcaption className='uppercase text-center font-mono px-3 rounded-full py-0.5 tracking-widest text-white/50 text-[11px] md:text-xs'>
-								Developer. Engineer. Creator.
+								💻 Developer 🛠️ Builder 🚀 Creator
 							</figcaption>
 						</figure>
 
 						<h1 className='text-center max-w-[20ch] mx-auto text-balance sm:text-[40px] md:text-5xl leading-none text-[34px] font-semibold tracking-[-0.04em]'>
 							I like to build things from zero to one
 						</h1>
-						{/* <p className='text-white/80 text-balance max-w-[50ch] mx-auto text-center text-15 sm:text-base'>
+						{/* <p className='text-white/80 mt-3 text-balance max-w-[50ch] mx-auto text-center text-15 sm:text-base'>
 							I&apos;m Arek, 22y/o Front-end Developer passionate about turning ideas into real
 							products.
 						</p> */}
