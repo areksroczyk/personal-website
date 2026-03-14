@@ -2,8 +2,22 @@ import { ExperienceItem } from '@/utils/types'
 import webProfessorImg from '@/assets/images/work/webprofessor.jpeg'
 import goitImg from '@/assets/images/work/goit.jpeg'
 import selfEmployedImg from '@/assets/images/avatar.jpg'
+import justjoinitImg from '@/assets/images/work/justjoinit.png'
 
 export const workItems: ExperienceItem[] = [
+	{
+		id: 'justjoinit',
+		title: 'JustJoin.it & RocketJobs',
+		logo: justjoinitImg,
+		url: 'https://justjoin.it/',
+		roles: ['Frontend Software Engineer'],
+		achievements: [
+			'Shipping features across <strong class="text-white/90">JustJoin.it & RocketJobs</strong> - two of Poland\'s leading job platforms.',
+			'Focused on <strong class="text-white/90">product impact over pure engineering</strong>, contributing to roadmap decisions and shaping UX that directly affects millions of job seekers and employers.',
+			'Driving <strong class="text-white/90">performance, scalability, and user experience</strong> improvements across both products in a fast-moving, cross-functional team.'
+		],
+		period: '03.2026 - Present • 1 month'
+	},
 	{
 		id: 'web-professor',
 		title: 'Web Professor',
@@ -16,7 +30,7 @@ export const workItems: ExperienceItem[] = [
 			'Partnered with the CEO to <strong class="text-white/90">automate AI workflows and SOPs</strong>, reducing project turnaround by <strong class="text-white/90">50%</strong> and significantly increasing team velocity.',
 			'Built a scalable content infra using <strong class="text-white/90">PayloadCMS & Sanity</strong> with reusable React components, cutting subsequent website build times by <strong class="text-white/90">60%</strong>.'
 		],
-		period: '02.2024 - Present • 2 years'
+		period: '02.2024 - 02.2026 • 2 years'
 	},
 	{
 		id: 'freelance-web-designer',
