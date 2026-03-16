@@ -10,7 +10,7 @@ export const workItems: ExperienceItem[] = [
 		title: 'JustJoin.it & RocketJobs',
 		logo: justjoinitImg,
 		url: 'https://justjoin.it/',
-		roles: ['Frontend Software Engineer'],
+		roles: ['Frontend Software Engineer', 'Future Product Builder'],
 		achievements: [
 			'Shipping features across <strong class="text-white/90">JustJoin.it & RocketJobs</strong> - two of Poland\'s leading job platforms.',
 			'Focused on <strong class="text-white/90">product impact over pure engineering</strong>, contributing to roadmap decisions and shaping UX that directly affects millions of job seekers and employers.',
