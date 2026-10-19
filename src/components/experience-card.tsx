@@ -14,11 +14,11 @@ type Props = {
 const ExperienceCard: FC<Props> = ({ item, className, live = false, showExternalIcon = false }) => {
 	const { title, logo, url, roles, description, achievements, period } = item
 
-	const baseClassName = 'rounded-3xl bg-primary p-4 gap-4 sm:p-5 md:p-6'
+	const baseClassName = 'relative rounded-3xl bg-primary p-4 gap-4 sm:p-5 md:p-6'
 
 	const content = (
 		<>
-			<div className='flex items-center gap-3 mb-5'>
+			<div className={twMerge('flex items-center gap-3 mb-5', showExternalIcon && 'pr-8')}>
 				<Image
 					src={logo}
 					alt={`${title} - ${roles.join(', ')} - Arkadiusz Sroczyk`}
@@ -49,7 +49,7 @@ const ExperienceCard: FC<Props> = ({ item, className, live = false, showExternal
 						))}
 					</div>
 				</div>
-				{showExternalIcon && <ArrowUpRight className='size-5 text-white/75 shrink-0 ml-auto' aria-hidden='true' />}
+				{showExternalIcon && <ArrowUpRight className='absolute top-4 right-4 sm:top-5 sm:right-5 md:top-6 md:right-6 size-5 text-white/75' aria-hidden='true' />}
 			</div>
 
 			{description && (
