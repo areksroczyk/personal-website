@@ -1,16 +1,16 @@
 import Image from 'next/image'
 import avatarImg from '@/assets/images/avatar-real.png'
+import wigoImg from '@/assets/images/work/wigo.png'
 import XTwitterIcon from '@/assets/icons/socials/x-twitter'
-import { BriefcaseBusiness, GraduationCap, Layers } from 'lucide-react'
+import { BriefcaseBusiness, GraduationCap } from 'lucide-react'
 import LinkedinIcon from '@/assets/icons/socials/linkedin'
 import { instagramUrl, linkedInUrl, xTwitterUrl } from '@/content/constants'
 import ExperienceCard from '@/components/experience-card'
 import { workItems } from '@/content/work'
 import { educationItems } from '@/content/education'
-import jakaszkolaMockupImg from '@/assets/images/work/jakaszkola-mockup.jpg'
-import leanStartupBookImg from '@/assets/images/recent-read.jpg'
+import wigoPreviewImg from '@/assets/images/work/wigo-preview.png'
+import artOfFocusBookImg from '@/assets/images/art-of-focus.jpg'
 import AnimatedArrowButton from '@/components/ui/button/animated-arrow-button'
-import { technologiesByCategory } from '@/content/technologies'
 import MapBox from '@/components/mapbox'
 import InstagramIcon from '@/assets/icons/socials/instagram'
 import { Suspense } from 'react'
@@ -37,7 +37,7 @@ export default function Home() {
 								>
 									jakaszkola.pl
 								</a> */}
-								In Product Builder mode
+								Building...
 							</div>
 						</div>
 
@@ -50,7 +50,7 @@ export default function Home() {
 							/>
 
 							<figcaption className='uppercase text-center font-mono px-3 rounded-full py-0.5 tracking-widest text-white/50 text-[11px] md:text-xs'>
-								💻 Developer 🛠️ Builder 🚀 Creator
+								💻 Founder 🛠️ Builder 🚀 Creator
 							</figcaption>
 						</figure>
 
@@ -83,16 +83,16 @@ export default function Home() {
 
 					{/* Recent read */}
 					<a
-						href='https://www.amazon.pl/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898'
+						href='https://theartoffocusbook.com/'
 						target='_blank'
 						rel='nofollow noopener noreferrer'
-						aria-label='Check Lean Startup book on Amazon'
+						aria-label='Explore The Art of Focus by Dan Koe'
 						className='bg-primary group rounded-3xl group relative bento-read h-56 md:h-auto overflow-hidden active:outline-primary-800 outline-2 outline-primary hover:outline-primary-800 active:scale-[0.98] transition-[transform_outline-color]'
 					>
 						<Image
-							src={leanStartupBookImg}
+							src={artOfFocusBookImg}
 							priority={true}
-							alt='Lean Startup book cover'
+							alt='The Art of Focus by Dan Koe book cover'
 							className='rounded-3xl group-hover:-rotate-25 group-hover:-translate-x-7 w-auto h-48 md:h-68 lg:h-54 absolute top-1/2 -translate-y-1/2 -right-12 -rotate-20 transition-all duration-600 ease-fast-in-slow-out shadow-[-7px_0_20px_rgba(247,246,242,0.13)]'
 						/>
 						<AnimatedArrowButton className='absolute left-3 bottom-10' />
@@ -171,19 +171,19 @@ export default function Home() {
 
 					{/* Featured project */}
 					<a
-						href='https://jakaszkola.pl/'
+						href='https://gowigo.app'
 						target='_blank'
 						rel='nofollow noopener noreferrer'
-						aria-label='Check Jakaszkola.pl project'
+						aria-label='Explore Wigo'
 						className='bg-primary group rounded-3xl group relative bento-project h-56 md:h-62 lg:h-auto overflow-hidden active:outline-primary-800 outline-2 outline-primary hover:outline-primary-800 active:scale-[0.98] transition-[transform_outline-color]'
 					>
 						<Image
-							src={jakaszkolaMockupImg}
-							alt='Jakaszkola.pl project mockup'
+							src={wigoPreviewImg}
+							alt='Wigo website preview'
 							className='rounded-3xl group-hover:-rotate-26 group-hover:-translate-x-8 w-auto h-56 md:h-68 lg:h-86 absolute top-1/2 -translate-y-1/2 right-0 -rotate-20 transition-all duration-600 ease-fast-in-slow-out shadow-[-7px_0_20px_rgba(247,246,242,0.13)]'
 						/>
 						<p className='absolute flex flex-col  gap-1 left-3 top-1/2 -translate-y-1/2 group-hover:scale-90 duration-500 group-hover:blur-[2px] ease-fast-in-slow-out origin-left transition-all text-white text-2xl font-semibold tracking-[-0.04em]'>
-							Jakaszkola.pl
+							Wigo
 							<span className='text-white/50 text-xs font-mono uppercase tracking-wider max-w-[25ch]'>
 								Featured project
 							</span>
@@ -210,6 +210,27 @@ export default function Home() {
 			</section>
 
 			<div className='my-12 w-full h-0.5 bg-primary-800 rounded-full max-w-sm mx-auto'></div>
+
+
+			{/* Products Shipped Section */}
+			<section aria-labelledby='products-heading' className='mb-20 max-w-3xl mx-auto'>
+				<h2 id='products-heading' className='text-center text-balance sm:text-3xl leading-tight text-[26px] font-semibold tracking-[-0.04em] mb-8'>
+					Products Shipped
+				</h2>
+				<ExperienceCard
+					live
+					showExternalIcon
+					item={{
+						id: 'wigo',
+						title: 'Wigo',
+						logo: wigoImg,
+						url: 'https://gowigo.app',
+						roles: ['Web app', 'iOS app · Soon', 'Activity discovery'],
+						description: 'Discover places and things to do in your city. Explore activities, compare prices, and find ideas for your next outing with friends.',
+						period: 'Launched in Wrocław · October 2026'
+					}}
+				/>
+			</section>
 
 			{/* Work Experience Section */}
 			<section className='mb-20 max-w-3xl mx-auto'>
@@ -248,46 +269,6 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* Technologies Section */}
-			<section className='mb-20 max-w-3xl mx-auto'>
-				<div className='fade-in-initial intersect:animate-fade-in will-change-transform intersect-once'>
-					<p className='flex items-center text-xs gap-1 text-white/50 justify-center mb-1 uppercase font-mono'>
-						<Layers className='size-3.5' />
-						<span>Tech stack</span>
-					</p>
-					<h2 className='text-center text-balance sm:text-3xl leading-tight text-[26px] font-semibold tracking-[-0.04em] mb-8'>
-						Technologies I use to build
-					</h2>
-
-					<div className='flex flex-col gap-3'>
-						{Object.entries(technologiesByCategory).map(([category, techs]) => (
-							<div key={category} className='px-4 py-6 rounded-3xl bg-primary'>
-								<h3 className='text-xs uppercase font-mono font-medium text-white/50 mb-4 tracking-wider text-center'>
-									{category}
-								</h3>
-								<ul className='flex flex-wrap justify-center items-center gap-2'>
-									{techs.map((tech) => {
-										const Icon = tech.icon
-										return (
-											<li key={tech.id} className='group'>
-												<a
-													href={tech.url}
-													target='_blank'
-													rel='nofollow noopener noreferrer'
-													className='flex focus-visible:ring-2 ring-white/20 px-3 py-1.5 items-center gap-2 tracking-[-0.04em] leading-tight bg-white/5 hover:bg-white/15 focus-visible:outline-hidden text-white/75 rounded-full transition-[background-color_transform] text-sm font-medium whitespace-nowrap active:scale-[0.98]'
-												>
-													<Icon className='size-3.5 opacity-90' />
-													<span>{tech.name}</span>
-												</a>
-											</li>
-										)
-									})}
-								</ul>
-							</div>
-						))}
-					</div>
-				</div>
-			</section>
 		</div>
 	)
 }

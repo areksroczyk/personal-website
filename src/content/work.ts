@@ -6,17 +6,25 @@ import justjoinitImg from '@/assets/images/work/justjoinit.png'
 
 export const workItems: ExperienceItem[] = [
 	{
+		id: 'independent-product-builder',
+		title: 'Independent Product Builder',
+		logo: selfEmployedImg,
+		roles: ['Self-employed'],
+		description: 'Building and shipping my own products, from the first idea through design, development, and launch. Currently building Wigo, a place to discover activities and places to go, launched in Wrocław.',
+		period: '10.2026 - Present'
+	},
+	{
 		id: 'justjoinit',
 		title: 'JustJoin.it & RocketJobs',
 		logo: justjoinitImg,
 		url: 'https://justjoin.it/',
-		roles: ['Frontend Software Engineer', 'Future Product Builder'],
+		roles: ['Frontend Software Engineer'],
 		achievements: [
-			'Shipping features across <strong class="text-white/90">JustJoin.it & RocketJobs</strong> - two of Poland\'s leading job platforms.',
+			'Shipped features across <strong class="text-white/90">JustJoin.it & RocketJobs</strong> - two of Poland\'s leading job platforms.',
 			'Focused on <strong class="text-white/90">product impact over pure engineering</strong>, contributing to roadmap decisions and shaping UX that directly affects millions of job seekers and employers.',
-			'Driving <strong class="text-white/90">performance, scalability, and user experience</strong> improvements across both products in a fast-moving, cross-functional team.'
+			'Contributed to <strong class="text-white/90">performance, scalability, and user experience</strong> improvements across both products in a fast-moving, cross-functional team.'
 		],
-		period: '03.2026 - Present • 1 month'
+		period: '03.2026 - 06.2026 • 3 months'
 	},
 	{
 		id: 'web-professor',
